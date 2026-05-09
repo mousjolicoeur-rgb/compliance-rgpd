@@ -6,21 +6,18 @@ const plans = [
   {
     name: "Starter",
     price: "49",
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_STARTER!,
     features: ["5 analyses / mois", "PDF & TXT", "Score RGPD", "Email support"],
     highlight: false,
   },
   {
     name: "Business",
     price: "99",
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BUSINESS!,
     features: ["30 analyses / mois", "Rapport detaille PDF", "Historique 12 mois", "Support prioritaire"],
     highlight: true,
   },
   {
     name: "Enterprise",
     price: "199",
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ENTERPRISE!,
     features: ["Analyses illimitees", "Multi-sites", "API dediee", "Accompagnement DPO"],
     highlight: false,
   },
@@ -38,7 +35,7 @@ export default function AbonnementPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        priceId,
+        planName,
         email: user?.email || "",
       }),
     });

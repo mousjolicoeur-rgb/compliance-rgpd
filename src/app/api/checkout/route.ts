@@ -1,6 +1,12 @@
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+function stripeClient() {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    throw new Error("STRIPE_SECRET_KEY is not configured");
+  }
+  return new Stripe(key);
+}
 
 const PRICE_IDS: Record<string, string> = {
   Starter: process.env.STRIPE_PRICE_STARTER!,
@@ -10,6 +16,7 @@ const PRICE_IDS: Record<string, string> = {
 
 export async function POST(req: Request) {
   try {
+    const stripe = stripeClient();
     const { planName, email } = await req.json();
 
     const priceId = PRICE_IDS[planName];
