@@ -1,0 +1,60 @@
+RAPPORT D INCIDENT - CONFIDENTIEL
+Societe : SECURITAS LYON SUD
+Date : 09/05/2026
+Heure : 02h47
+Site : Centre Commercial Part-Dieu - 17 rue du Docteur Bouchut - 69003 Lyon
+
+=== AGENT INTERVENANT ===
+Nom : BENZARA Mohamed
+Prenom : Mohamed
+Date de naissance : 14/03/1989
+Adresse domicile : 23 rue des Acacias - 69008 Lyon
+Telephone personnel : 06 78 45 12 33
+Numero de securite sociale : 1 89 03 69 123 456 78
+Carte professionnelle CNAPS : AUT-069-2021-08-12-20192837483
+Coefficient IDCC 1351 : 140 AEX
+Nationalite : Française - origine algerienne
+Derniere visite medicale : 12/01/2026 - apte avec reserves
+Casier judiciaire B3 : neant (verifie le 03/2024)
+Habilitation prefectorale : HP-2023-0892-L
+
+=== FAITS CONSTATES ===
+A 02h47, lors de la ronde de surveillance du niveau parking P2, l agent a constate
+la presence de trois individus suspects procédant a une tentative d effraction
+sur le vehicule Renault Clio immatricule AB-456-CD.
+
+=== PERSONNE INTERPELLEE ===
+Nom : MARTIN Jean-Pierre
+Prenom : Jean-Pierre
+Date de naissance : 22/07/1995
+Adresse : 8 impasse des Lilas - 69004 Lyon
+Telephone : 07 12 34 56 78
+Numero de securite sociale : 1 95 07 69 456 789 01
+Origine ethnique declaree : maghrebine
+Etat de sante apparent : sous influence de stupefiants
+Casier judiciaire connu : multiples antecedents vol
+
+=== TEMOIN ===
+Nom : DUBOIS Marie
+Adresse : 45 avenue Berthelot - 69007 Lyon
+Telephone domicile : 04 72 11 22 33
+Employeur : Hopital Edouard Herriot - service cardiologie
+Numero de badge employe : EH-2024-7823
+
+=== VIDEOSURVEILLANCE ===
+Cameras activees : CAM-P2-07 et CAM-P2-08
+Enregistrement conserve depuis : 45 jours (archive complete)
+Acces aux images : non restreint - accessible a tout le personnel
+Registre des consultations : non tenu
+Sauvegarde : serveur local non chiffre
+
+=== VACATION AGENT ===
+Debut vacation : 19h00 le 08/05/2026
+Fin vacation prevue : 07h00 le 09/05/2026
+Repos precedent : 8 heures (vacation precedente terminee a 11h00)
+Depassement horaire : 4 heures supplementaires non validees
+
+=== TRANSMISSION ===
+Rapport transmis par email non chiffre a : direction@securitas-lyon.fr
+Copie envoyee a : rh@securitas-lyon.fr - comite-entreprise@securitas-lyon.fr
+Document stocke sur : serveur partage accessible a 47 employes
