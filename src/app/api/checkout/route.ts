@@ -2,9 +2,24 @@ import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
+const PRICE_IDS: Record<string, string> = {
+  Starter: process.env.STRIPE_PRICE_STARTER!,
+  Business: process.env.STRIPE_PRICE_BUSINESS!,
+  Enterprise: process.env.STRIPE_PRICE_ENTERPRISE!,
+};
+
 export async function POST(req: Request) {
   try {
-    const { priceId, email } = await req.json();
+    const { planName, email } = await req.json();
+
+    const priceId = PRICE_IDS[planName];
+
+    if (!priceId) {
+      return Response.json(
+        { error: `Plan inconnu : ${planName}` },
+        { status: 400 }
+      );
+    }
 
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
@@ -18,7 +33,7 @@ export async function POST(req: Request) {
     return Response.json({ url: session.url });
   } catch (error) {
     return Response.json(
-      { error: "Erreur création session", details: String(error) },
+      { error: "Erreur creation session", details: String(error) },
       { status: 500 }
     );
   }

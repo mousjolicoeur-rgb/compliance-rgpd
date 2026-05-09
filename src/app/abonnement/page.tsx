@@ -88,7 +88,7 @@ export default function AbonnementPage() {
                 ))}
               </ul>
               <button
-                onClick={() => handleSubscribe(plan.priceId, plan.name)}
+                onClick={() => handleSubscribe(plan.name)}
                 disabled={loading === plan.name}
                 className={`w-full py-3 rounded-lg font-semibold text-sm transition ${
                   plan.highlight
