@@ -30,7 +30,7 @@ export default function AbonnementPage() {
   const [loading, setLoading] = useState<string | null>(null);
   const supabase = createClient();
 
-  const handleSubscribe = async (priceId: string, planName: string) => {
+  const handleSubscribe = async (planName: string) => {
     setLoading(planName);
     const { data: { user } } = await supabase.auth.getUser();
 
