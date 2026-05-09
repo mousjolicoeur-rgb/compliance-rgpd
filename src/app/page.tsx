@@ -44,7 +44,7 @@ export default function LandingPage() {
 
   const plans = [
     { name: "Starter", price: "49", period: "/ mois", features: ["5 analyses / mois", "PDF & TXT", "Score RGPD", "Email support"], cta: "Démarrer", highlight: false },
-    { name: "Business", price: "99", period: "/ mois", features: ["30 analyses / mois", "Rapport détaillé PDF", "Historique 12 mois", "Support prioritaire"], cta: "Essai 14 jours", highlight: true },
+    { name: "Business", price: "99", period: "/ mois", features: ["30 analyses / mois", "Rapport détaillé PDF", "Historique 12 mois", "Support prioritaire"], cta:"1 analyse gratuite", highlight: true },
     { name: "Enterprise", price: "199", period: "/ mois", features: ["Analyses illimitées", "Multi-sites", "API dédiée", "Accompagnement DPO"], cta: "Nous contacter", highlight: false },
   ];
 
