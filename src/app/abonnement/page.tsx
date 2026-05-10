@@ -44,7 +44,7 @@ export default function AbonnementPage() {
     if (data.url) {
       window.location.href = data.url;
     } else {
-      alert("Erreur lors de la redirection vers le paiement.");
+      alert(data.error ?? "Erreur lors de la redirection vers le paiement.");
       setLoading(null);
     }
   };
