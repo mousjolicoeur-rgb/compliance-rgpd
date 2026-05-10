@@ -267,13 +267,18 @@ export default function Dashboard() {
         <div className="topbar">
           <div className="logo">Compliance<span>RGPD</span></div>
           <div className="top-nav">
-            {["Dashboard", "Analyses", "Rapports", "Paramètres"].map((n) => (
+            {[
+              { label: "Dashboard",   href: "/dashboard" },
+              { label: "Analyses",    href: "/dashboard/analyses" },
+              { label: "Rapports",    href: "/dashboard/rapports" },
+              { label: "Paramètres", href: "/dashboard/parametres" },
+            ].map(({ label, href }) => (
               <button
-                key={n}
-                className={activeNav === n ? "active" : ""}
-                onClick={() => setActiveNav(n)}
+                key={label}
+                className={activeNav === label ? "active" : ""}
+                onClick={() => { setActiveNav(label); router.push(href); }}
               >
-                {n}
+                {label}
               </button>
             ))}
           </div>
@@ -289,23 +294,27 @@ export default function Dashboard() {
           <div className="sidebar">
             <div className="sidebar-section">Navigation</div>
             {[
-              { icon: "ti-layout-dashboard", label: "Tableau de bord" },
-              { icon: "ti-file-search", label: "Mes analyses" },
-              { icon: "ti-upload", label: "Nouvelle analyse" },
-              { icon: "ti-chart-bar", label: "Rapports" },
-            ].map(({ icon, label }) => (
-              <div key={label} className={`sidebar-item${label === "Tableau de bord" ? " active" : ""}`}>
+              { icon: "ti-layout-dashboard", label: "Tableau de bord", href: "/dashboard" },
+              { icon: "ti-file-search",      label: "Mes analyses",    href: "/dashboard/analyses" },
+              { icon: "ti-upload",           label: "Nouvelle analyse", href: "/analyse" },
+              { icon: "ti-chart-bar",        label: "Rapports",         href: "/dashboard/rapports" },
+            ].map(({ icon, label, href }) => (
+              <div
+                key={label}
+                className={`sidebar-item${label === "Tableau de bord" ? " active" : ""}`}
+                onClick={() => router.push(href)}
+              >
                 <i className={`ti ${icon}`} aria-hidden="true" />
                 {label}
               </div>
             ))}
             <div className="sidebar-section">Compte</div>
             {[
-              { icon: "ti-user", label: "Mon profil" },
-              { icon: "ti-credit-card", label: "Abonnement" },
-              { icon: "ti-settings", label: "Paramètres" },
-            ].map(({ icon, label }) => (
-              <div key={label} className="sidebar-item">
+              { icon: "ti-user",        label: "Mon profil",  href: "/dashboard/profil" },
+              { icon: "ti-credit-card", label: "Abonnement",  href: "/abonnement" },
+              { icon: "ti-settings",    label: "Paramètres",  href: "/dashboard/parametres" },
+            ].map(({ icon, label, href }) => (
+              <div key={label} className="sidebar-item" onClick={() => router.push(href)}>
                 <i className={`ti ${icon}`} aria-hidden="true" />
                 {label}
               </div>
